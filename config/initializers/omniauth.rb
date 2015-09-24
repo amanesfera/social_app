@@ -12,6 +12,11 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     'https://www.googleapis.com/auth/admin.directory.user.readonly',
     'https://www.googleapis.com/auth/plus.media.upload'],
    access_type: 'offline',approval_prompt:'force'} 
+
+  ENV['LINKEDIN_CLIENT_ID']="77lua7g04wrotv"
+  ENV['LINKEDIN_CLIENT_SECERT']="kQ5eIi3o8l99J782"
+
+  provider :linkedin, ENV['LINKEDIN_CLIENT_ID'], ENV['LINKEDIN_CLIENT_SECERT'], :scope => 'r_emailaddress w_share'
   
 end
 

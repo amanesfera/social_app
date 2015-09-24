@@ -17,4 +17,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
      
   end
+  def linkedin
+
+  end
 end
